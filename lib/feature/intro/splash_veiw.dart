@@ -4,6 +4,7 @@ import 'package:cash_project/core/utils/textstyle.dart';
 import 'package:cash_project/feature/upload/upload.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:lottie/lottie.dart';
 
 class splash_veiw extends StatefulWidget {
   const splash_veiw({super.key});
@@ -18,7 +19,7 @@ class _splash_veiwState extends State<splash_veiw> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    Future.delayed(Duration(seconds: 10),(){
+    Future.delayed(Duration(seconds: 5),(){
       pushReplacement(context, upload_view());
     });
   }
@@ -31,12 +32,12 @@ class _splash_veiwState extends State<splash_veiw> {
           
           children: [ 
            
-            
+          Lottie.asset('assets/images/logo.json',width: 240,height: 240),
           Text("Taskaty",style: getTitleLineTextSTyle(fontSize: 24,fontWeight: FontWeight.w500),),
    
-         Gap(10),
+         Gap(7),
 
-          Text("It is time to be organized",style: getSmallLineTextSTyle(fontSize: 16),),],
+          Text("It \'s time to be organized",style: getSmallLineTextSTyle(fontSize: 16),),],
         ),
       ),
 
